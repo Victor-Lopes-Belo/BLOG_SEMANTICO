@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
 }
 
 ul {
@@ -11,16 +12,17 @@ ul {
 a {
     text-decoration: none;
     color: #444;
-    transition: 0.4s;
+    transition: color 0.4s ease;
 }
 
 a:hover {
-    color: #37a1f7;
+    color: #00A28B;
 }
 
 #navbar {
     padding: 1.5rem 2.5rem;
-    border-bottom: 2px solid #ddd;
+    background: linear-gradient(135deg, #00A28B, #00e5ff42);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #navbar-inner {
@@ -29,6 +31,11 @@ a:hover {
     align-items: center;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+#navbar-inner h2 {
+    font-size: 2rem;
+    color: #fff;
 }
 
 #nav-links {
@@ -42,6 +49,9 @@ a:hover {
     display: flex;
     gap: 3rem;
     padding: 2rem 2.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #posts-container {
@@ -55,21 +65,24 @@ a:hover {
 .post img {
     width: 100%;
     margin-bottom: 1rem;
-}
-
-.title,
-.description,
-.author {
-    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .title {
     font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00A28B;
+}
+
+.description {
+    margin-bottom: 1rem;
 }
 
 .author {
-    color: #333;
-    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: #666;
+    font-weight: bold;
 }
 
 #sidebar {
@@ -82,6 +95,9 @@ a:hover {
     padding: 1.5rem;
     border: 1px solid #ddd;
     margin-bottom: 1rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 #search-bar h4,
@@ -95,16 +111,25 @@ a:hover {
     display: flex;
 }
 
-#search-bar input {
+#search-bar input[type="text"] {
     padding: 0.5rem 1rem;
     border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+    outline: none;
 }
 
 #search-bar input[type="submit"] {
     cursor: pointer;
-    background-color: #37a1f7;
+    background-color: #00A28B;
     color: #fff;
     border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 0.5rem 1rem;
+}
+
+#search-bar input[type="submit"]:hover {
+    background-color: #00796B;
 }
 
 #categories li {
@@ -118,20 +143,29 @@ a:hover {
 }
 
 #tags-container a {
-    background-color: #ddd;
+    background-color: #00A28B;
+    color: #fff;
     padding: 0.5rem 0.7rem;
     border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+#tags-container a:hover {
+    background-color: #00796B;
 }
 
 #footer {
     border-top: 2px solid #ddd;
     padding: 3rem;
     text-align: center;
+    background: #fff;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #footer h2,
 footer p {
     margin-bottom: 1rem;
+    color: #00A28B;
 }
 
 @media(max-width: 450px){
